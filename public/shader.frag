@@ -2,6 +2,7 @@ precision mediump float;
 varying vec2 pos;
 
 uniform float millis;
+uniform float fractions;
 
 float FACTOR = 4.0;
 
@@ -16,7 +17,7 @@ void main() {
   vec4 top = mix(blue, orang, pos.x);
   vec4 btom = mix(magenta, green, pos.y);
   vec4 res = mix(top, btom, pos.y);
-  vec2 fraction = fract(fs.xy * FACTOR);
+  vec2 fraction = fract(fs.xy * fractions);
 
   gl_FragColor = vec4(fraction.x, fraction.y * (sin(millis/1000.)+1.), res.z, 0.7);
 }
