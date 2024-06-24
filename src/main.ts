@@ -2,7 +2,7 @@ import p5 from "p5";
 import "./style.css"
 import { uniforms } from "./utils";
 
-const WIDTH = document.body.clientWidth/2;
+const WIDTH = document.body.clientWidth < document.body.clientHeight ? document.body.clientWidth/1.3 : document.body.clientHeight/1.3;
 const HEIGHT = WIDTH;
 
 let sh: p5.Shader;
