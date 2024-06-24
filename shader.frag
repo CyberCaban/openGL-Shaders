@@ -19,5 +19,5 @@ void main() {
   vec4 res = mix(top, btom, pos.y);
   vec2 fraction = fract(fs.xy * fractions);
 
-  gl_FragColor = vec4(fraction.x, fraction.y * (sin(millis/1000.)+1.), res.z, 0.7);
+  gl_FragColor = vec4(fraction.x, fraction.y * (sin(millis/1000.)+1.4), res.z, 0.65);
 }
